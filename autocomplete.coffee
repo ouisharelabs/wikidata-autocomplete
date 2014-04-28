@@ -31,7 +31,7 @@ $ ->
           queries[query] = {}
       return
 
-
+cors-anywhere
 wikidataSearch = (query, language = "en", format="json")->
     return "https://www.wikidata.org/w/api.php?action=wbsearchentities&language=#{language}&format=#{format}&search=#{query}"
 

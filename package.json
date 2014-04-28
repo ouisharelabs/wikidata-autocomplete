@@ -9,6 +9,7 @@
   "author": "maxlath",
   "license": "AGPL3",
   "dependencies": {
-    "cors-anywhere": "^0.1.9"
+    "cors-anywhere": "^0.1.9",
+    "coffee-script": "^1.7.1"
   }
 }
