@@ -43,8 +43,10 @@ window.timeout = null
 timeoutSetter = ->
   window.timeout = "not null"
   f = ->
+    console.log new Date()
     window.timeout = null
     if window.lastQueried != window.lastQuery
+      window.lastQueried = window.lastQuery
       console.log "QUERY SAVER!"
       console.log window.lastQuery
       getJSONWikidataSearchResults window.lastQuery, lang
@@ -53,7 +55,7 @@ timeoutSetter = ->
     # console.log window.lastQueried
     # console.log window.lastQuery
     # console.log window.lastQueried != window.lastQuery
-  setTimeout(f, 1000)
+  setTimeout(f, 500)
 
 wikidataSearch = (query, language = "en", format="json")->
     return "https://www.wikidata.org/w/api.php?action=wbsearchentities&language=#{language}&format=#{format}&search=#{query}"

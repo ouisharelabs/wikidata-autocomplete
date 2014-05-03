@@ -55,15 +55,17 @@
     var f;
     window.timeout = "not null";
     f = function() {
+      console.log(new Date());
       window.timeout = null;
       if (window.lastQueried !== window.lastQuery) {
+        window.lastQueried = window.lastQuery;
         console.log("QUERY SAVER!");
         console.log(window.lastQuery);
         getJSONWikidataSearchResults(window.lastQuery, lang);
         return timeoutSetter();
       }
     };
-    return setTimeout(f, 1000);
+    return setTimeout(f, 500);
   };
 
   wikidataSearch = function(query, language, format) {
