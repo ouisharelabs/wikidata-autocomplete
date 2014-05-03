@@ -21,12 +21,12 @@ For instance, if I'm look for "Les Misérables", it will successivelly do the fo
 
 Then it appends all the results to [jQuery Autocomplete](http://jqueryui.com/autocomplete/) `availableTags` array.
 
-not very efficient... any suggestion?
+not very efficient, so I tried to limit the queries with a timeout
 
 Setup
 ----------
 ```
-git clone git@github.com:maxlath/wikidata-autocomplete.git
+git clone git@github.com:ouisharelabs/wikidata-autocomplete.git
 npm install
 coffee ./cors-proxy.coffee 3001
 ```
@@ -40,4 +40,5 @@ Would do something cleaner if this gets somewhere.
 Documentation
 --------------
 * [WikiData Group thread](http://lists.wikimedia.org/pipermail/wikidata-l/2014-April/003752.html)
-*
+* Netention/[Curiosumé](http://www.ingenesist.com/general-info/curiosume-integrating-social-innovation.html)
+* the [Project Wiki](https://github.com/ouisharelabs/wikidata-autocomplete/wiki)
